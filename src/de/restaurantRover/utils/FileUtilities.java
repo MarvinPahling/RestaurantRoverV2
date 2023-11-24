@@ -1,17 +1,12 @@
 package de.restaurantRover.utils;
 
 import de.restaurantRover.main.dataClasses.Item;
-
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Arrays;
-
 import de.restaurantRover.main.enums.Category;
 import de.restaurantRover.main.enums.Place;
 import de.restaurantRover.main.enums.Veggie;
+
+import java.io.*;
+import java.util.Arrays;
 
 public class FileUtilities {
 
@@ -58,6 +53,7 @@ public class FileUtilities {
                 writer.append(";");
                 writer.append(item.getDescription());
                 writer.append("\n");
+                writer.flush();
             }
 
             // Schließe den Writer
@@ -108,12 +104,64 @@ public class FileUtilities {
             // Verkleinere das Array auf die tatsächliche Größe
             Item[] realItems = Arrays.copyOfRange(items, 0, i);
 
-            return realItems;
+            return getOrderedItems(realItems);
 
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static Item[] getOrderedItems(Item[] items){
+        Item[] helpArray = new Item[items.length];
+
+        int c = 0;
+
+
+           for (int j = 0; j < items.length; j++) {
+               if(items[j].getKategorie().equals(Category.STARTER)){
+                   helpArray[c] = items[j];
+                   c++;
+               }
+           }
+
+           for (int j = 0; j < items.length; j++) {
+               if(items[j].getKategorie().equals(Category.MAINDISHES)){
+                   helpArray[c] = items[j];
+                   c++;
+               }
+           }
+
+           for (int j = 0; j < items.length; j++) {
+               if(items[j].getKategorie().equals(Category.DESSERTS)){
+                   helpArray[c] = items[j];
+                   c++;
+               }
+           }
+
+           for (int j = 0; j < items.length; j++) {
+               if(items[j].getKategorie().equals(Category.DRINKS)){
+                   helpArray[c] = items[j];
+                   c++;
+               }
+           }
+
+           for (int j = 0; j < items.length; j++) {
+               if(items[j].getKategorie().equals(Category.ALKOHOL)){
+                   helpArray[c] = items[j];
+                   c++;
+               }
+           }
+
+           for (int j = 0; j < items.length; j++) {
+               if(items[j].getKategorie().equals(Category.OTHERS)){
+                   helpArray[c] = items[j];
+                   c++;
+               }
+           }
+
+
+        return Arrays.copyOfRange(helpArray, 0, c);
     }
 
     public static String getDescription(int startingIndex, String[] fields) {

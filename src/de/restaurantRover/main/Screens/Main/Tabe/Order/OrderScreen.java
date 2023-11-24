@@ -1,90 +1,104 @@
-package de.restaurantRover.main.Screens;
+package de.restaurantRover.main.Screens.Main.Tabe.Order;
 
-import de.restaurantRover.main.dataClasses.AccessData;
 import de.restaurantRover.main.dataClasses.Item;
+import de.restaurantRover.main.dataClasses.Settings;
+import de.restaurantRover.main.dataClasses.Table;
+import de.restaurantRover.main.enums.Place;
+import de.restaurantRover.utils.ConsoleUtilities;
+import de.restaurantRover.main.dataClasses.TabelManager;
 import de.restaurantRover.utils.FileUtilities;
 
-import java.io.File;
-import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class OrderScreen {
-    public static Item[] items = new Item[0];
-    public static void print_ordered_items(int Table){
 
-        String Eingabe = "";
-        Item[] items = null;
+   public static void run(int tableNumber){
+       Table self = TabelManager.tables[tableNumber - 1];
+       if(self == null){
+           self = new Table(tableNumber);
+       }
+       ConsoleUtilities.clear();
 
-                //if exist "temp_path"+"table_"+Integer.toString(Table)+".csv"{
-        String filePath = "Restaurant_Rover/temp/currentTables/Table" + Table+".csv";
-        // Replace with the actual file path
-
-        File file = new File(filePath);
-
-        if (!file.exists()) {
-           //Leere Datei erzeugen;
-            try{
-                file.createNewFile();
-            }
-                catch(IOException e){
-                System.err.println("Error creating the file: " + e.getMessage());
-            }
-        }
-
-        //Dateiexistiert jetzt sicher
-        //georderte Items fuer diesen Tisch ausgeben
+       Scanner s = new Scanner(System.in);
 
 
-        //do{
-            for(int i=0; i<100; i++){
-            System.out.println( " ");
-            }
+       System.out.println(String.format("Tisch %d", tableNumber));
+       ConsoleUtilities.printMinusLine();
+       ConsoleUtilities.printEmptyLine(2);
 
-            items =  FileUtilities.readItemsFromCsv(filePath);
+       System.out.println("Bestellte Posten:");
+       self.printOrderedItems();
+       ConsoleUtilities.printEmptyLine(2);
 
-            System.out.print("Ihre bisherigen Bestellungen:\n");
-
-            for(int j=0; j<items.length; j++){
-            System.out.println( " "+items[j].getName() );
-            }
-
+       System.out.println("Ausgewählte Posten:");
+       self.printSelectedItems();
+       ConsoleUtilities.printEmptyLine(2);
+       ConsoleUtilities.printMinusLine();
 
 
-            System.out.print("\n \nWas moechten sie als naechstes tun? \n B = Bestellen \n R = Rechnung \n");
-            Scanner s = new Scanner(System.in);
-            Eingabe = s.next();
-            s.close();
+         System.out.println("Bitte wählen Sie eine Option aus:");
+         System.out.println("1. Essen/Getränke hinzufügen");
+         System.out.println("2. Bestellung aufgeben");
 
-            switch (Eingabe){
-                case "B":
-                    OrderAddScreen.run(Table);
+
+         System.out.println("3. Bezahlung");
+
+            int eingabe = s.nextInt();
+
+            switch (eingabe) {
+                case 1:
+                    OrderAddScreen.run(tableNumber);
                     break;
-                case "R":
-                    OrderPay.run(Table);
+                case 2:
+                    Item[] items = self.selectedItems.toArray(new Item[0]);
+                    Item[] bar = new Item[items.length];
+                    Item[] kitchen = new Item[items.length];
+                    int c1 = 0;
+                    int c2 = 0;
+                    for (Item item : items){
+                        if(item.getPlace().equals(Place.BAR)){
+                            bar[c1] = item;
+                            c1++;
+                        }
+                        if(item.getPlace().equals(Place.KITCHEN)){
+                            kitchen[c2] = item;
+                            c2++;
+                        }
+                    }
+
+                    bar = Arrays.copyOfRange(bar, 0, c1);
+                    kitchen = Arrays.copyOfRange(kitchen, 0, c2);
+
+                    LocalDateTime currentDateTime = LocalDateTime.now();
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+                    String formattedDateTime = currentDateTime.format(formatter);
+
+                    FileUtilities.writeItemsToCsv(bar, Settings.pathToBar + String.format("/Tisch%d_%s.csv", tableNumber, formattedDateTime));
+                    FileUtilities.writeItemsToCsv(kitchen, Settings.pathToKitchen + String.format("/Tisch%d_%s.csv", tableNumber, formattedDateTime));
+
+                    self.orderdItems.addAll(self.selectedItems);
+
+                    self.selectedItems.clear();
+
+                    OrderScreen.run(tableNumber);
+                case 3:
+                    //OrderPay.run(tableNumber);
                     break;
                 default:
-                    System.out.print("Ungueltige Eingabe");
+                    System.out.println("Bitte geben Sie eine gültige Option ein!");
+                    run(tableNumber);
+                    break;
             }
 
 
-        //}while (!Eingabe.equals(AccessData.backPassword));
-
-       /*}while()
-        //Abfrage moechten sie etwas bestellen?
-        bei nein Abbruch Screen verlassen;
-        bei Ja
-            Leere Datei erzeugen;
-
-        oeffne OrderAdd Screen
 
 
+   }
 
-
-
-        //Hanna*/
-        // List of all the things that have been ordered, if nothing has been ordered before shows text like
-    }   // "what would you like to order?" and if something has been ordered show further options like
-    // order more or pay or send order Kitchen and Bar
 }
 
 

@@ -1,5 +1,9 @@
-package de.restaurantRover.main.Screens;
+package de.restaurantRover.main.Screens.Main;
 
+import de.restaurantRover.main.Screens.Main.Admin.AdminScreen;
+import de.restaurantRover.main.Screens.Main.Bar.BarScreen;
+import de.restaurantRover.main.Screens.Main.Kitchen.KitchenScreen;
+import de.restaurantRover.main.Screens.Main.Tabe.TableSelectionScreen;
 import de.restaurantRover.main.dataClasses.Settings;
 
 import java.util.Scanner;

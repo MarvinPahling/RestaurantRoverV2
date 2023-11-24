@@ -11,9 +11,9 @@ public class Settings {
         Settings.tableCount = tableCount;
     }
 
-    public static final String pathToTemp = "Restaurant_Rover/temp";
-    public static final String pathToBar = "Restaurant_Rover/temp/Bar";
-    public static final String pathToKitchen = "Restaurant_Rover/temp/Kitchen";
+    public static final String pathToInternalDara = "src/de/restaurantRover/internalData";
+    public static final String pathToBar = "src/de/restaurantRover/internalData/Bar";
+    public static final String pathToKitchen = "src/de/restaurantRover/internalData/Kitchen";
 
-    public static final String pathToMenu = "Restaurant_Rover/Menu/menu.csv";
+    public static final String pathToMenu = "src/de/restaurantRover/Menu/CurrentMenu/menu.csv";
 }

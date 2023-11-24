@@ -1,11 +1,11 @@
-package de.restaurantRover.main.Screens;
+package de.restaurantRover.main.Screens.Main.Admin;
 
+import de.restaurantRover.main.Screens.Main.MainScreen;
 import de.restaurantRover.main.dataClasses.AccessData;
 import de.restaurantRover.main.dataClasses.Menu;
 import de.restaurantRover.main.dataClasses.Settings;
 import de.restaurantRover.utils.FileUtilities;
 
-import java.nio.file.FileVisitResult;
 import java.util.Scanner;
 
 public class AdminScreen {
@@ -49,11 +49,11 @@ public class AdminScreen {
                 run();
                 break;
             case "2":
-                Menu.items = FileUtilities.readItemsFromCsv("Restaurant_Rover/Menu/menu.csv");
+                Menu.items = FileUtilities.readItemsFromCsv("Restaurant_Rover/de.restaurantRover.Menu/menu.csv");
                 run();
                 break;
             case "3":
-                FileUtilities.writeItemsToCsv(Menu.items, "Restaurant_Rover/Menu/CurrentMenu/menu.csv");
+                FileUtilities.writeItemsToCsv(Menu.items, "Restaurant_Rover/de.restaurantRover.Menu/CurrentMenu/menu.csv");
                 run();
                 break;
             case "4":
