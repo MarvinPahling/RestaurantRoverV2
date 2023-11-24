@@ -1,0 +1,62 @@
+Name;Preis;Kategorie;Veggie;Place;Beschreibung
+Bruschetta;3.99;STARTER;VEGAN;KITCHEN;Knuspriges Baguette mit Tomaten
+Caprese-Salat;5.49;STARTER;VEGETARIAN;KITCHEN;Frische Tomaten
+Calamari Fritti;7.99;STARTER;MEAT;KITCHEN;Zarte frittierte Tintenfischringe, mit Knoblauchmayo
+Minestrone;4.49;STARTER;VEGAN;KITCHEN;Italienische Gemüsesuppe mit Nudeln
+Margherita-Pizza;6.99;MAINDISHES;VEGETARIAN;KITCHEN;Einfache Pizza mit Tomaten
+Risotto ai Funghi;8.99;MAINDISHES;VEGAN;KITCHEN;Risotto mit Pilzen
+Lasagne al Forno;9.49;MAINDISHES;MEAT;KITCHEN;Schichten von Nudeln
+Penne all'Arrabbiata;7.99;MAINDISHES;VEGAN;KITCHEN;Penne mit scharfer Tomatensauce
+Ravioli ai Quattro Formaggi;8.99;MAINDISHES;VEGETARIAN;KITCHEN;Hausgemachte Ravioli mit vier Käsesorten
+Tiramisu;4.99;DESSERTS;VEGETARIAN;KITCHEN;Italienisches Dessert mit Löffelbiskuits
+Cannoli Siciliani;5.49;DESSERTS;VEGETARIAN;KITCHEN;Gefüllte Teigröllchen mit Ricotta und Schokolade
+Panna Cotta;4.99;DESSERTS;VEGETARIAN;KITCHEN;Vanillecreme mit Beerenkompott
+Gelato;3.49;DESSERTS;VEGETARIAN;KITCHEN;Italienisches Eis in verschiedenen Sorten
+Negroni;6.49;ALKOHOL;VEGAN;BAR;Klassischer Cocktail mit Gin
+Aperol Spritz;5.99;ALKOHOL;VEGAN;BAR;Erfrischender Aperitif mit Aperol
+Chianti Classico;25.99;ALKOHOL;VEGETARIAN;BAR;Trockener Rotwein aus der Toskana
+Prosecco;19.99;ALKOHOL;VEGAN;BAR;Spritziger italienischer Schaumwein
+Espresso;2.49;DRINKS;VEGAN;BAR;Kräftiger italienischer Espresso
+Cappuccino;3.49;DRINKS;VEGAN;BAR;Espresso mit aufgeschäumter Milch
+Limoncello;3.49;ALKOHOL;VEGAN;BAR;Italienischer Zitronenlikör als erfrischender Abschluss
+Aranciata;2.99;DRINKS;VEGAN;BAR;Spritziges Orangengetränk
+Rigatoni alla Norma;8.49;MAINDISHES;VEGETARIAN;KITCHEN;Rigatoni mit Tomatensauce
+Frittata di Verdure;6.99;MAINDISHES;VEGETARIAN;KITCHEN;Italienisches Omelett mit Gemüse
+Insalata di Mare;10.99;STARTER;MEAT;KITCHEN;Meeresfrüchtesalat mit Olivenöl und Zitrone
+Spaghetti Carbonara;7.99;MAINDISHES;MEAT;KITCHEN;Spaghetti mit Ei
+Filetto di Manzo;16.99;MAINDISHES;MEAT;KITCHEN;Rinderfilet mit Rosmarinkartoffeln und Rotweinsauce
+Carciofi Ripieni;7.49;STARTER;VEGETARIAN;KITCHEN;Gefüllte Artischockenherzen mit Kräuterbrot
+Zuppa di Pesce;12.99;MAINDISHES;MEAT;KITCHEN;Italienischer Fischeintopf mit Tomaten
+Tortellini in Brodo;6.99;STARTER;MEAT;KITCHEN;Hausgemachte Tortellini in Fleischbrühe
+Pistacchio Gelato;4.49;DESSERTS;VEGETARIAN;KITCHEN;Pistazieneis mit gerösteten Pistazien
+Caffè Corretto;5.49;ALKOHOL;VEGAN;BAR;Espresso mit einem Schuss Grappa oder Sambuca
+Gnocchi al Pesto;8.49;MAINDISHES;VEGETARIAN;KITCHEN;Gnocchi mit frischem Basilikumpesto
+Zabaione;4.99;DESSERTS;VEGAN;KITCHEN;Schaumiges Dessert mit Marsala und Eigelb
+Amaretto Sour;6.99;ALKOHOL;VEGAN;BAR;Cocktail mit Amaretto
+Granita al Limone;3.99;DESSERTS;VEGAN;KITCHEN;Zitronensorbet mit Minze
+Pesce all'Acqua Pazza;13.99;MAINDISHES;MEAT;KITCHEN;Fisch in Tomatensauce mit Knoblauch und Petersilie
+Cacio e Pepe;8.99;MAINDISHES;VEGETARIAN;KITCHEN;Spaghetti mit Pecorino und schwarzem Pfeffer
+Baba al Rum;5.99;DESSERTS;VEGETARIAN;KITCHEN;Schwammkuchen getränkt in Rum
+Rucola e Parmigiano;5.49;STARTER;VEGETARIAN;KITCHEN;Rucolasalat mit Kirschtomaten und Parmesan
+Linguine alle Vongole;9.99;MAINDISHES;MEAT;KITCHEN;Linguine mit Venusmuscheln
+Risotto al Nero di Seppia;10.99;MAINDISHES;MEAT;KITCHEN;Risotto mit Tintenfischtinte
+Affogato al Caffè;4.49;DESSERTS;VEGETARIAN;KITCHEN;Vanilleeis mit einem Schuss Espresso
+Moscato d'Asti;14.99;ALKOHOL;VEGETARIAN;BAR;Süßer italienischer Dessertwein
+Sgroppino;5.99;ALKOHOL;VEGETARIAN;BAR;Cocktail mit Prosecco
+Mineralwasser;1.49;DRINKS;VEGAN;BAR;Spritziges Mineralwasser
+Tagliatelle al Ragu;9.49;MAINDISHES;MEAT;KITCHEN;Breite Bandnudeln mit klassischer Fleischsauce
+Focaccia con Rosmarino;4.99;STARTER;VEGAN;KITCHEN;Fluffiges Fladenbrot mit Olivenöl und Rosmarin
+Zuppa Toscana;6.49;STARTER;MEAT;KITCHEN;Toskanische Wurst- und Kartoffelsuppe
+Fiori di Zucca;7.49;STARTER;VEGAN;KITCHEN;Gebackene Zucchiniblüten mit Ricotta und Zitronenzeste
+Pesce Spada alla Siciliana;12.99;MAINDISHES;MEAT;KITCHEN;Sizilianisches Schwertfischsteak mit Tomaten
+Torta della Nonna;5.49;DESSERTS;VEGETARIAN;KITCHEN;Traditioneller Kuchen mit Pudding und Pinienkernen
+Linguine al Pesto Genovese;8.99;MAINDISHES;VEGAN;KITCHEN;Linguine mit frischem Basilikumpesto und Kartoffeln
+Ricotta e Spinaci Ravioli;8.99;MAINDISHES;VEGETARIAN;KITCHEN;Hausgemachte Ravioli mit Ricotta und Spinatfüllung
+Cacio e Pere;6.99;DESSERTS;VEGETARIAN;KITCHEN;Pecorino-Käse mit Birnenmarmelade
+Sambuca;4.99;ALKOHOL;VEGAN;BAR;Anislikör als Digestif
+Caffè Shakerato;4.49;DRINKS;VEGAN;BAR;Eiskalter Espresso
+Carpaccio di Manzo;9.99;STARTER;MEAT;KITCHEN;Hauchdünn geschnittenes Rinderfilet mit Rucola und Parmesan
+Paccheri all'Amatriciana;8.49;MAINDISHES;MEAT;KITCHEN;Paccheri-Nudeln mit Tomatensauce
+Limone Sorbetto;3.99;DESSERTS;VEGAN;KITCHEN;Erfrischendes Zitronensorbet
+Cannelloni Ricotta e Spinaci;9.49;MAINDISHES;VEGETARIAN;KITCHEN;Überbackene Cannelloni mit Ricotta und Spinat
+Pizza Döner;10.49;MAINDISHES;MEAT;KITCHEN;Pizza mit Dönerfleisch und Gouda überbacken
